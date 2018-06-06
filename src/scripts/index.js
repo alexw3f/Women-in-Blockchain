@@ -1,25 +1,58 @@
 import '../scss/styles.scss';
 
+import $ from 'jquery';
 import BigNumber from 'bignumber.js';
 
-import ticker from "./ticker";
+import 'bootstrap';
 import balance from "./balance";
+import donors from "./donors";
 
-let price;
+const moment = require('moment');
 
-const goal = 100;
+const dateEnd = moment("2018-12-29");
+const dateStart = moment("2017-12-29");
 
-ticker.subscribe((_price) => price = _price);
+const totalDays = dateEnd.diff(dateStart, 'days');
 
-balance.subscribe((balance) => {
-  if (!price) return;
+$(document).ready(() => {
+    setTimeout(() => {
+        $("body").removeClass("loading");
+    }, 1000);
 
-  const balanceUsd = balance.times(price);
 
-  const progressW = balanceUsd.div(goal).times(100).toFixed(0);
+    let b;
 
-  document.getElementById("goalUSD").innerText = "$" + goal;
-  document.getElementById("progress").style.width = progressW + "%";
-  document.getElementById("raisedETH").innerText = balance.toFixed(4) + " ETH";
-  document.getElementById("raisedUSD").innerText = "$" + balanceUsd.toFixed(2);
+    balance.subscribe((balance) => {
+        b = new BigNumber(balance);
+        $("#raisedETH").text(b.toFixed(4) + " ETH");
+    });
+
+    ticker.subscribe((price) => {
+        if (!b) {
+            return;
+        }
+
+       $("#raisedUSD").text("$" + b.times(price).toFixed(2));
+    });
+
+    donors.subscribe((no) => {
+        $("#donors").html(no);
+    });
+
+    const now = moment();
+
+    const progress = dateEnd.diff(now, 'days');
+
+    // [ 0, 100 ]
+    const bar = $("#progress");
+    bar.css({width: ((progress/totalDays) * 100).toFixed(2) + '%'});
+
+    $("#findDonatorForm").submit((e) => {
+        e.preventDefault();
+        window.location.href = "donator.html#" + $("#donatorAddress").val();
+    });
 });
+
+import '../vendor/particles';
+import '../vendor/app';
+import ticker from "./ticker";

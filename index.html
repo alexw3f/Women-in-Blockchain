@@ -7,106 +7,153 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	
 	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript">
-	particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"image","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"femenine.svg","width":100,"height":100}},"opacity":{"value":0.15,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":15,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":3,"direction":"top","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":552.4033491425909,"rotateY":1341.5509907748635}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":395.6043956043956,"line_linked":{"opacity":1}},"bubble":{"distance":299.7002997002997,"size":91.9080919080919,"duration":1.6783216783216783,"opacity":1,"speed":3},"repulse":{"distance":119.88011988011989,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":false});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
-	</script>
 
-		
-		
-	
+    <style type="text/css">
+        body { opacity: 1; transition: opacity ease-in-out 2s; }
+        .loading { opacity: 0; }
+    </style>
 </head>
-<body>
+<body class="loading">
     <div class="section">
-
+        <div id="particles-js"></div>
         <div class="section__content">
-		<div id="particles-js"></div>
-		<script type="text/javascript" src="particles.js"></script>
-		<script type="text/javascript" src="app.js"></script>
             <div class="body__stripes">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
 
-            <h3>Community fundraiser powered by Ethereum</h3>
+            <nav>
+                <div class="container">
+                    <div class="logo">
+                        Women in <span class="text-primary">Blockchain</span>
+                        <small>A Community Fundraiser powered by Ethereum</small>
+                    </div>
 
-            <div class="container header">
-                <h1>Women in Blockchain</h1>
-                <h2>Token of Gratitude</h2>
-            </div>
+                    <div class="menu">
+                        <a href="#">Donate</a>
+                        <a href="#">View donation</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </nav>
 
             <div class="container hero">
                 <div class="row">
-                    <div class="col">
-                        <img class="hero__pic" src="src\img\image.png" />
+                    <div class="col card2">
+                        <div class="h">Our <span class="text-primary">cause</span></div>
 
-                        <div class="hero__title">Our cause</div>
                         <div class="hero__desc">
-                            As part of our commitment to equal opportunities for everyone, Trust Square together with Procivis and FDP Women Switzerland launched a community fundraiser to benefit young women in Ouahigouya, Burkina Faso. For this purpose, we have built a charity smart contract called “Token of Gratitude” based on which individuals can contribute Ether to the project. In return, the smart contract will issue a token to the contributor’s wallet which will serve as a “donation certificate”. (add stuff about Tulips) The smart contract will run for a total of 8 weeks (August 7, 2018). After this, the funds collected will be released to the wallet of the charity. You can find the repository of the smart contract here (add hyperlink to repo). We believe that fundraising via public ledger can greatly increase transparency and reduce administrative costs for charitable giving. We are very happy that the Swiss charity IAMANEH agreed to collaborate with us to accept donations denominated in Ether.
+                            Here we put <120 chars introduction of the project. If anyone is interested in hearing the
+                            full story let him follow the "Read more" link that points to the "About" section of this
+                            website.
+                        </div>
+                        <div style="margin-top: 24px">
+                            <button class="btn btn-primary" style="font-size: 0.95rem; padding: 8px 32px">Learn more</button>
                         </div>
                     </div>
 
-                    <div class="col hero__column">
-                        <div class="card">
-                            <div class="hero__title">Raised to date</div>
-                            <div class="hero__raised">
-                                <span id="raisedUSD"><i class="fas fa-circle-notch fa-spin"></i></span>
+                    <div class="col card">
+                        <div class="hero__title">Raised to date</div>
+                        <div class="hero__raised">
+                            <span id="raisedUSD"><i class="fas fa-circle-notch fa-spin"></i></span>
 
-                                <small><span id="raisedETH"><i class="fas fa-circle-notch fa-spin"></i></span></small>
-                            </div>
+                            <small><span id="raisedETH"><i class="fas fa-circle-notch fa-spin"></i></span></small>
+                        </div>
 
-                            <div class="hero__progress">
-                                <div class="hero__progress-filling" id="progress"></div>
-                            </div>
+                        <div class="hero__progress">
+                            <div class="hero__progress-filling" id="progress"></div>
+                        </div>
 
-                            <div class="hero__details">
-                                <div class="row">
-                                    <div class="col flex-column">
-                                        <div class="hero__detail-header"><span id="donors"><i class="fas fa-circle-notch fa-spin"></i></span></div>
-                                        <div class="hero__subtitle">Donors</div>
-                                    </div>
+                        <div class="hero__details">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="hero__detail-header"><span id="donors"><i class="fas fa-circle-notch fa-spin"></i></span></div>
+                                    <div class="hero__subtitle">Donors</div>
+                                </div>
 
-                                    <div class="col">
-                                        <div class="hero__detail-header"><span id="goalUSD"><i class="fas fa-circle-notch fa-spin"></i></span></div>
-                                        <div class="hero__subtitle">Goal</div>
-                                    </div>
+                                <div class="col-8">
+                                    <div class="hero__detail-header">9 March 2018</div>
+                                    <div class="hero__subtitle">Closing date</div>
                                 </div>
                             </div>
-
-                            <a href="#" class="btn btn-primary btn-block hero__button">Donate</a>
-                            <a href="#" class="btn btn-secondary btn-block hero__button">View donation</a>
                         </div>
+
+                        <a href="javascript:void()" data-toggle="modal" data-target="#donateModal"
+                           class="btn btn-primary btn-block hero__button hero__button--donate">Donate</a>
+                        <a href="javascript:void()" data-toggle="modal" data-target="#donatorModal"
+                           class="btn btn-secondary btn-block hero__button">View donation</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="section organizers">
+        <div class="hh">Organizers</div>
+
+        <div style="margin-top: 16px">
+            <img src="https://www.trustsquare.ch/static/logo.89004c13.svg" class="hero__logo" />
+            <img src="https://procivis.ch/wp-content/uploads/2017/09/Procivis-Logo-only-01.svg" class="hero__logo" />
+            <img src="https://www.fdp.ch/fileadmin/templates/plr.ch/img/logo/logo_fdp.svg" class="hero__logo" />
+        </div>
+
+    </div>
+
+
+
+    <div class="modal fade" id="donateModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="hh">Donate now</div>
+
+                <img style="width: 200px; height: 200px; margin: 32px auto;" src="data:image/png;base64,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" />
+                <div class="form-group">
+                    <label>Ethereum address</label>
+                    <input class="form-control" value="0x10720287897512" />
                 </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                <button class="btn btn-primary">Copy address</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="donatorModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="hh">Find your donation</div>
+                <p>
+                    If you already donated please provide your Ethereum address.
+                </p>
+
+                <div style="margin-top: 16px">
+                    <form id="findDonatorForm" class="row">
+                        <div class="form-group col-8">
+                            <label>Your Etheruem wallet address</label>
+                            <input id="donatorAddress" class="form-control" />
+                        </div>
+
+                        <div class="form-group col-4" style="padding-top: 31px">
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
     <div class="container section">
-        <h1>Partners</h1>
+        <div class="row">
+            <div class="col">
+                <div class="h">About the project</div>
+                <p>Foo</p>
+            </div>
+
+            <div class="col">
+                <div class="h">About us</div>
+            </div>
+        </div>
+
     </div>
 
     <script src="build/bundle.js"></script>

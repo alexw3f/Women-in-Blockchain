@@ -48,6 +48,9 @@
     "babel-preset-stage-2": "^6.24.1",
     "bignumber.js": "^7.2.1",
     "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "moment": "^2.22.2",
+    "popper.js": "^1.14.3",
     "rxjs": "^6.2.0",
     "web3": "^1.0.0-beta.34"
   }

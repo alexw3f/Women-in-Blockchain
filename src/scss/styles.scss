@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 
-$font-family-base: "Open Sans", sans-serif;
-
-$color-1: #fc5c65;
-$color-2: #fd9644;
-$color-3: #f7b731;
-
-$primary: $color-1;
-$secondary: #fff;
+@import 'variables';
 
 @import '../../node_modules/bootstrap/scss/bootstrap-grid';
 @import '../../node_modules/bootstrap/scss/bootstrap-reboot';
 @import '../../node_modules/bootstrap/scss/buttons';
 @import '../../node_modules/bootstrap/scss/modal';
+@import '../../node_modules/bootstrap/scss/input-group';
+@import '../../node_modules/bootstrap/scss/forms';
+
+@import './organizers';
 
 html, body {
-  background: #fff;
+  background: rgba(250, 250, 250, 0.85);
   -webkit-font-smoothing: subpixel-antialiased;
+  font-family: $font-family-base;
 }
 
 h1, h2, h3 {
@@ -63,16 +61,26 @@ h3 {
 }
 
 .hero {
-  margin-top: 128px;
+  .col:nth-of-type(2) {
+    width: 200px;
+  }
 
-  @media(max-width: 1000px) {
-    margin-top: 32px;
+  .card {
+    margin-left: 90px;
+    max-width: 445px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 10px;
   }
 }
 
-.hero__desc {
+.hero__desc, p {
+  margin-top: 16px;
   line-height: 2rem;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 .hero__pic {
@@ -83,27 +91,24 @@ h3 {
 }
 
 .hero__title {
-  color: #666;
-  font-size: 1.4rem;
+  color: #444;
+  font-size: 1.25rem;
 }
 
 .hero__subtitle {
-  color: #666;
-  font-weight: 400;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .hero__detail-header {
   margin-top: 8px;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.65rem;
+  font-weight: 600;
   color: #444;
 }
 
 .hero__raised {
-  font-weight: 700;
-  font-size: 2.65rem;
+  font-weight: 600;
+  font-size: 2.25rem;
   margin-bottom: 8px;
 
   small {
@@ -111,12 +116,13 @@ h3 {
     font-size: 1.6rem;
     color: #666;
     margin-left: 16px;
+    font-weight: 500;
   }
 }
 
 .hero__progress {
   display: block;
-  background: $color-2;
+  background: #e2e2e2;
   border-radius: 4px;
   margin: 8px 0;
   overflow: hidden;
@@ -125,12 +131,15 @@ h3 {
 
 .hero__progress-filling {
   background: $color-1;
-  height: 20px;
+  height: 8px;
 }
 
 .hero__button {
   margin-top: 24px;
   padding: 16px;
+}
+
+.hero__button--donate {
 }
 
 .payment {
@@ -139,18 +148,16 @@ h3 {
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-.hero__column {
-  max-width: 500px;
-  padding-left: 50px;
-
-  @media(max-width: 1000px) {
-    padding-left: 0;
-  }
+.hero__logo {
+  margin: 32px 0 0 0;
+  max-height: 64px;
+  width: auto;
 }
 
 .card {
-  border-radius: 6px;
   padding: 24px 36px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+  background: #fff;
 }
 
 .btn {
@@ -160,14 +167,101 @@ h3 {
 }
 
 .section {
-  height: 100vh;
   position: relative;
+  padding: 64px 0;
+
+  &:nth-of-type(1) {
+    padding-top: 0 !important;
+  }
+}
+
+.section--white {
+  background: #fff;
 }
 
 .section__content {
-  position: absolute;
   z-index: 5;
   width: 100%;
   top:0; left: 0;
   height: 100%;
+}
+
+#particles-js {
+  z-index: -1;
+
+  canvas {
+    z-index: -1;
+  }
+}
+
+nav {
+  display: block;
+  z-index: 999;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  margin-bottom: 32px;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.05);
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    font-size: 1.7125rem;
+    vertical-align: middle;
+    font-weight: 600;
+    margin-top: 16px;
+
+    small {
+      font-size: 0.95rem;
+      font-weight: 400;
+      display: block;
+      padding-left: 2px;
+      margin-top: -4px;
+      color: $color-3;
+    }
+  }
+
+  .menu {
+    flex: 1;
+    text-align: right;
+    vertical-align: middle;
+
+    a {
+      transition: all ease-in-out 0.2s;
+      display: inline-block;
+      font-size: 1.05rem;
+      padding: 32px 16px;
+      font-weight: 500;
+      color: #767676;
+      text-decoration: none;
+
+      &:hover {
+        color: #333;
+        background: #f0f0f0;
+      }
+    }
+  }
+}
+
+.h {
+  padding: 8px 0 8px 16px;
+  border-left: 5px solid $color-1;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.modal-content {
+  padding: 32px;
+}
+
+.card2 {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
 }
