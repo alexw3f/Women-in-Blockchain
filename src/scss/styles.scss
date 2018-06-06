@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+$font-family-base: "Open Sans", sans-serif;
+
+$color-1: #fc5c65;
+$color-2: #fd9644;
+$color-3: #f7b731;
+
+$primary: $color-1;
+$secondary: #fff;
+
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/modal';
+
+html, body {
+  background: #fff;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.9125rem;
+  font-weight: 600;
+  color: #333;
+  margin: 16px;
+  line-height: 1;
+}
+
+h2 {
+  line-height: 1;
+  margin: 16px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #555;
+}
+
+h3 {
+  font-weight: 400;
+  text-align: center;
+  color: #888;
+  font-size: 1.2rem;
+  padding: 32px;
+}
+
+.body__stripes {
+  height: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  & > div {
+    flex: 1;
+
+    &:nth-of-type(1) { background: $color-1 }
+    &:nth-of-type(2) { background: $color-2 }
+    &:nth-of-type(3) { background: $color-3 }
+  }
+}
+
+.hero {
+  margin-top: 128px;
+
+  @media(max-width: 1000px) {
+    margin-top: 32px;
+  }
+}
+
+.hero__desc {
+  line-height: 2rem;
+  font-size: 1.15rem;
+}
+
+.hero__pic {
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+  max-height: 300px;
+}
+
+.hero__title {
+  color: #666;
+  font-size: 1.4rem;
+}
+
+.hero__subtitle {
+  color: #666;
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.hero__detail-header {
+  margin-top: 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.hero__raised {
+  font-weight: 700;
+  font-size: 2.65rem;
+  margin-bottom: 8px;
+
+  small {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #666;
+    margin-left: 16px;
+  }
+}
+
+.hero__progress {
+  display: block;
+  background: $color-2;
+  border-radius: 4px;
+  margin: 8px 0;
+  overflow: hidden;
+  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.05);
+}
+
+.hero__progress-filling {
+  background: $color-1;
+  height: 20px;
+}
+
+.hero__button {
+  margin-top: 24px;
+  padding: 16px;
+}
+
+.payment {
+  padding: 32px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero__column {
+  max-width: 500px;
+  padding-left: 50px;
+
+  @media(max-width: 1000px) {
+    padding-left: 0;
+  }
+}
+
+.card {
+  border-radius: 6px;
+  padding: 24px 36px;
+}
+
+.btn {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.section {
+  height: 100vh;
+  position: relative;
+}
+
+.section__content {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  top:0; left: 0;
+  height: 100%;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6 SASS Webpack-2 starter kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+	particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"image","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"femenine.svg","width":100,"height":100}},"opacity":{"value":0.15,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":15,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":3,"direction":"top","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":552.4033491425909,"rotateY":1341.5509907748635}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":395.6043956043956,"line_linked":{"opacity":1}},"bubble":{"distance":299.7002997002997,"size":91.9080919080919,"duration":1.6783216783216783,"opacity":1,"speed":3},"repulse":{"distance":119.88011988011989,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":false});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+	</script>
+
+		
+		
+	
+</head>
+<body>
+    <div class="section">
+
+        <div class="section__content">
+		<div id="particles-js"></div>
+		<script type="text/javascript" src="particles.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+            <div class="body__stripes">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <h3>Community fundraiser powered by Ethereum</h3>
+
+            <div class="container header">
+                <h1>Women in Blockchain</h1>
+                <h2>Token of Gratitude</h2>
+            </div>
+
+            <div class="container hero">
+                <div class="row">
+                    <div class="col">
+                        <img class="hero__pic" src="src\img\image.png" />
+
+                        <div class="hero__title">Our cause</div>
+                        <div class="hero__desc">
+                            As part of our commitment to equal opportunities for everyone, Trust Square together with Procivis and FDP Women Switzerland launched a community fundraiser to benefit young women in Ouahigouya, Burkina Faso. For this purpose, we have built a charity smart contract called “Token of Gratitude” based on which individuals can contribute Ether to the project. In return, the smart contract will issue a token to the contributor’s wallet which will serve as a “donation certificate”. (add stuff about Tulips) The smart contract will run for a total of 8 weeks (August 7, 2018). After this, the funds collected will be released to the wallet of the charity. You can find the repository of the smart contract here (add hyperlink to repo). We believe that fundraising via public ledger can greatly increase transparency and reduce administrative costs for charitable giving. We are very happy that the Swiss charity IAMANEH agreed to collaborate with us to accept donations denominated in Ether.
+                        </div>
+                    </div>
+
+                    <div class="col hero__column">
+                        <div class="card">
+                            <div class="hero__title">Raised to date</div>
+                            <div class="hero__raised">
+                                <span id="raisedUSD"><i class="fas fa-circle-notch fa-spin"></i></span>
+
+                                <small><span id="raisedETH"><i class="fas fa-circle-notch fa-spin"></i></span></small>
+                            </div>
+
+                            <div class="hero__progress">
+                                <div class="hero__progress-filling" id="progress"></div>
+                            </div>
+
+                            <div class="hero__details">
+                                <div class="row">
+                                    <div class="col flex-column">
+                                        <div class="hero__detail-header"><span id="donors"><i class="fas fa-circle-notch fa-spin"></i></span></div>
+                                        <div class="hero__subtitle">Donors</div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="hero__detail-header"><span id="goalUSD"><i class="fas fa-circle-notch fa-spin"></i></span></div>
+                                        <div class="hero__subtitle">Goal</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="btn btn-primary btn-block hero__button">Donate</a>
+                            <a href="#" class="btn btn-secondary btn-block hero__button">View donation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container section">
+        <h1>Partners</h1>
+    </div>
+
+    <script src="build/bundle.js"></script>
+</body>
+</html>
