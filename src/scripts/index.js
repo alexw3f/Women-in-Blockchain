@@ -14,17 +14,12 @@ const dateStart = moment("2017-08-07");
 
 const totalDays = dateEnd.diff(dateStart, 'days');
 
-window.donator = () => {
-
-
-    $("body").removeClass("loading");
-};
+import './donation';
 
 $(document).ready(() => {
     setTimeout(() => {
         $("body").removeClass("loading");
     }, 1000);
-
 
     let b;
 

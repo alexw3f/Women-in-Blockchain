@@ -1,7 +1,32 @@
-import w3 from "./w3";
+import w3, {abi, contractAddr} from "./w3";
 
-const donation = () => {
-    const t = document.location.hash.split("#")[1];
+alert(abi);
+
+const contract = new w3.eth.Contract(abi, contractAddr);
+
+const showTulip = (data) => {
+    if (!data) {
+        $("#not_found").show(1);
+        $("#certificate").hide(1);
+        return;
+    }
+
+    // set tulip params based on data
+
+    $("#not_found").hide(1);
+    $("#certificate").show(1);
 };
 
-export default donation;
+const donation = () => {
+    const donatorAddr = document.location.hash.split("#")[1];
+
+    contract.getPastEvents("Transfer", {filter: {addr: donatorAddr}}).then((err, x) => {
+        if (err) {
+            showTulip(null);
+        } else {
+            showTulip(x);
+        }
+    });
+};
+
+window['donator'] = donation;

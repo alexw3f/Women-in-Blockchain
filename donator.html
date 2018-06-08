@@ -22,18 +22,31 @@
         <div></div>
     </div>
 
-    <div class="tulip__wrapper">
-        <div class="tulip">
-            <img src="/roses/top.png" class="tulip__top" />
-            <img src="/roses/effect.png" class="tulip__effect" />
-            <img src="/roses/b.png" class="fixed" />
+    <div id="not_found" style="margin-top: 36px; opacity: 0">
+        <div class="container certificate card">
+            <div class="h">Not found</div>
+            <p>We could not find your donation. Please try again in a moment.</p>
+            <div>
+                <a class="btn btn-primary" href="/">Go back</a>
+            </div>
         </div>
     </div>
 
-    <div class="container certificate card" id="certificate">
-        <div class="h">Donation certificate</div>
-        <p>Something like thank you for your donation?</p>
-        <p>some social share buttons?</p>
+
+    <div id="certificate" style="opacity: 0">
+        <div class="tulip__wrapper">
+            <div class="tulip">
+                <img src="/roses/top.png" class="tulip__top" />
+                <img src="/roses/effect.png" class="tulip__effect" />
+                <img src="/roses/b.png" class="fixed" />
+            </div>
+        </div>
+
+        <div class="container certificate card">
+            <div class="h">Donation certificate</div>
+            <p>Something like thank you for your donation?</p>
+            <p>some social share buttons?</p>
+        </div>
     </div>
 
     <script src="build/bundle.js"></script>
