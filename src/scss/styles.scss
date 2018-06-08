@@ -154,6 +154,45 @@ h3 {
   width: auto;
 }
 
+div.orga1 {
+  display: inline-block;
+  width: 33%;
+  position: relative;
+  vertical-align: top;
+}
+
+div.orga1 > img{
+  margin: 32px 0 0 0;
+  max-height: 64px;
+  width: auto;
+}
+
+div.orga2 {
+  display: inline-block;
+  width: 33%;
+  position: relative;
+  vertical-align: top;
+}
+
+div.orga2 > img{
+  margin: 32px 0 0 0;
+  max-height: 64px;
+  width: auto;
+}
+
+div.orga3 {
+  display: inline-block;
+  width: 33%;
+  position: relative;
+  vertical-align: top;
+}
+
+div.orga3 > img{
+  margin: 32px 0 0 0;
+  max-height: 64px;
+  width: auto;
+}
+
 .card {
   padding: 24px 36px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
