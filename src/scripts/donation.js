@@ -1,6 +1,6 @@
 import w3, {abi, contractAddr} from "./w3";
 
-alert(abi);
+import $ from 'jquery';
 
 const contract = new w3.eth.Contract(abi, contractAddr);
 
