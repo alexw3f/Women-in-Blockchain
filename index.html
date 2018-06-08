@@ -14,33 +14,37 @@
     </style>
 </head>
 <body class="loading">
-    <div class="section">
-        <div id="particles-js"></div>
-        <div class="section__content">
-            <div class="body__stripes">
-                <div></div>
-                <div></div>
-                <div></div>
+    <div class="body__stripes">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                Women in <span class="text-primary">Blockchain</span>
+                <small>A Community Fundraiser powered by Ethereum</small>
             </div>
 
-            <nav>
-                <div class="container">
-                    <div class="logo">
-                        Women in <span class="text-primary">Blockchain</span>
-                        <small>A Community Fundraiser powered by Ethereum</small>
-                    </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="menu">
-                        <a href="#project">The Project</a>
-						<a href="javascript:void()" data-toggle="modal" data-target="#donatorModal">View donation</a>
-                        <a href="#Organizers">Organizers</a>
-                    </div>
-                </div>
-            </nav>
+            <div class="menu collapse" id="menu">
+                <a href="#project">The Project</a>
+                <a href="javascript:void()" data-toggle="modal" data-target="#donatorModal">View donation</a>
+                <a href="#Organizers">Organizers</a>
+            </div>
+        </div>
+    </nav>
 
+    <div class="section" style="padding-top: 32px">
+        <div id="particles-js"></div>
+        <div class="section__content">
             <div class="container hero">
                 <div class="row">
-                    <div class="col card2">
+                    <div class="col-md card2">
                         <div class="h">Our <span class="text-primary">cause</span></div>
 
                         <div class="hero__desc">
@@ -51,7 +55,7 @@
                         </div>
                     </div>
 
-                    <div class="col card">
+                    <div class="col-md card">
                         <div class="hero__title">Raised to date</div>
                         <div class="hero__raised">
                             <span id="raisedUSD"><i class="fas fa-circle-notch fa-spin"></i></span>
@@ -99,20 +103,22 @@
         <div class="hh" id="Organizers">Organizers</div>
 	
 			<div class="container">
-				<div style="margin-top: 16px">
-					<div class="orga1">
-					<img src="https://www.trustsquare.ch/static/logo.89004c13.svg"  />
-					<p>In the heart of Switzerland’s commercial centre, Trust Square offers a space for your ideas to flourish. With blockchain technology as the common denominator, we bring together entrepreneurs, businesses, investors as well as academics and researchers in an open and diverse environment.</p>
-					</div>
-					<div class="orga2">
-					<img src="https://procivis.ch/wp-content/uploads/2017/09/Procivis-Logo-only-01.svg"  />
-					<p>Procivis is headquartered in Zurich and we are proud to call Switzerland home. We are dedicated to empowering individuals everywhere by providing them with trusted and compliant digital identity solutions they can fully own and control.</p>
-					</div>
-					<div class="orga3">
-					<img src="https://www.fdp.ch/fileadmin/templates/plr.ch/img/logo/logo_fdp.svg"  />
-					<p>For the last 65 years, the FDP. The Liberal Women Switzerland has been operating as a governing body for 40 cantonal and regional, liberal-minded women’s groups. More than 5000 members are engaged in political affairs, campaigning for the interests of our party. We stand for strong participation of women in politics, economy, as well as society. Our mission is clear: Mixed teams are the formula for success.</p>
-					</div>
-				</div>
+                <div class="row">
+                    <div class="col-md">
+                        <img src="https://www.trustsquare.ch/static/logo.89004c13.svg"  />
+                        <p>In the heart of Switzerland’s commercial centre, Trust Square offers a space for your ideas to flourish. With blockchain technology as the common denominator, we bring together entrepreneurs, businesses, investors as well as academics and researchers in an open and diverse environment.</p>
+                    </div>
+
+                    <div class="col-md">
+                        <img src="https://procivis.ch/wp-content/uploads/2017/09/Procivis-Logo-only-01.svg"  />
+                        <p>Procivis is headquartered in Zurich and we are proud to call Switzerland home. We are dedicated to empowering individuals everywhere by providing them with trusted and compliant digital identity solutions they can fully own and control.</p>
+                    </div>
+
+                    <div class="col-md">
+                        <img src="https://www.fdp.ch/fileadmin/templates/plr.ch/img/logo/logo_fdp.svg"  />
+                        <p>For the last 65 years, the FDP. The Liberal Women Switzerland has been operating as a governing body for 40 cantonal and regional, liberal-minded women’s groups. More than 5000 members are engaged in political affairs, campaigning for the interests of our party. We stand for strong participation of women in politics, economy, as well as society. Our mission is clear: Mixed teams are the formula for success.</p>
+                    </div>
+                </div>
 			</div>
 	</div>
 

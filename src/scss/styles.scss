@@ -8,6 +8,9 @@
 @import '../../node_modules/bootstrap/scss/modal';
 @import '../../node_modules/bootstrap/scss/input-group';
 @import '../../node_modules/bootstrap/scss/forms';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/transitions';
 
 @import './organizers';
 @import './donator';
@@ -67,7 +70,13 @@ h3 {
   }
 
   .card {
-    margin-left: 90px;
+    order: -1;
+
+    @media(min-width: 1000px) {
+      margin-left: 90px;
+      order: 1;
+    }
+
     max-width: 445px;
   }
 
@@ -159,49 +168,11 @@ body > div.container.section {
   width: auto;
 }
 
-div.orga1 {
-  display: inline-block;
-  width: 33%;
-  position: relative;
-  vertical-align: top;
-}
-
-div.orga1 > img{
-  margin: 32px 0 0 0;
-  max-height: 64px;
-  width: auto;
-}
-
-div.orga2 {
-  display: inline-block;
-  width: 33%;
-  position: relative;
-  vertical-align: top;
-}
-
-div.orga2 > img{
-  margin: 32px 0 0 0;
-  max-height: 64px;
-  width: auto;
-}
-
-div.orga3 {
-  display: inline-block;
-  width: 33%;
-  position: relative;
-  vertical-align: top;
-}
-
-div.orga3 > img{
-  margin: 32px 0 0 0;
-  max-height: 64px;
-  width: auto;
-}
-
 .card {
   padding: 24px 36px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
   background: #fff;
+  margin-bottom: 32px;
 }
 
 .btn {
@@ -212,7 +183,7 @@ div.orga3 > img{
 
 .section {
   position: relative;
-  padding: 64px 0;
+  padding: 64px 16px;
 
   &:nth-of-type(1) {
     padding-top: 0 !important;
@@ -231,6 +202,7 @@ div.orga3 > img{
 }
 
 #particles-js {
+  top:0; left:0;
   z-index: -1;
 
   canvas {
@@ -243,7 +215,6 @@ nav {
   z-index: 999;
   font-family: "Poppins", sans-serif;
   background: #fff;
-  margin-bottom: 32px;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.05);
 
   .container {
@@ -267,10 +238,23 @@ nav {
     }
   }
 
+
+  @media(max-width: 1000px) {
+    .container {
+      flex-wrap: wrap;
+    }
+
+    .menu {
+      flex-basis: 100%;
+    }
+  }
+
+
   .menu {
     flex: 1;
     text-align: right;
     vertical-align: middle;
+
 
     a {
       transition: all ease-in-out 0.2s;
