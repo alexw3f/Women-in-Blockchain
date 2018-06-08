@@ -9,10 +9,16 @@ import donors from "./donors";
 
 const moment = require('moment');
 
-const dateEnd = moment("2018-12-29");
-const dateStart = moment("2017-12-29");
+const dateEnd = moment("2018-06-12");
+const dateStart = moment("2017-08-07");
 
 const totalDays = dateEnd.diff(dateStart, 'days');
+
+window.donator = () => {
+
+
+    $("body").removeClass("loading");
+};
 
 $(document).ready(() => {
     setTimeout(() => {

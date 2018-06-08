@@ -1,31 +1,42 @@
 .tulip {
-  width: 400px;
-  height: 400px;
-  border-radius: 999px;
-  background: #fff;
-  margin: 32px auto;
-  line-height: 400px;
   text-align: center;
-  padding-top: 50px;
-  box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.02);
+  display: inline-block;
+  position: relative;
+  max-height: 100%;
 
-  svg {
-    max-height: 300px;
-    max-width: 300px;
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    z-index: 255;
+
+    &.fixed {
+      position: inherit !important;
+      max-height: 300px;
+      z-index: 120;
+    }
   }
 }
 
-.tulip__green {
-  fill: #00665A;
+.tulip__wrapper {
+  border-radius: 999px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.02);
+  width: 300px;
+  height: 300px;
+  margin: 32px auto;
 }
-
-.tulip__pink {
-  fill: #E4187A;
-}
-
 
 .certificate {
   max-width: 500px;
   margin: auto;
   background: #fff;
+}
+
+.tulip__effect {
+  z-index: 100 !important;
 }
