@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ES6 SASS Webpack-2 starter kit</title>
+    <title>Women in Blockchain</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	
@@ -31,10 +31,9 @@
                     </div>
 
                     <div class="menu">
-                        <a href="#">Donate</a>
-                        <a href="#">View donation</a>
-                        <a href="#">About</a>
-                        <a href="#">Contact</a>
+                        <a href="#project">The Project</a>
+						<a href="javascript:void()" data-toggle="modal" data-target="#donatorModal">View donation</a>
+                        <a href="#Organizers">Organizers</a>
                     </div>
                 </div>
             </nav>
@@ -45,12 +44,10 @@
                         <div class="h">Our <span class="text-primary">cause</span></div>
 
                         <div class="hero__desc">
-                            Here we put <120 chars introduction of the project. If anyone is interested in hearing the
-                            full story let him follow the "Read more" link that points to the "About" section of this
-                            website.
-                        </div>
-                        <div style="margin-top: 24px">
-                            <button class="btn btn-primary" style="font-size: 0.95rem; padding: 8px 32px">Learn more</button>
+                            <p>As part of our commitment to equal opportunities for everyone, Trust Square together with Procivis and FDP Women Switzerland launched a community fundraiser to benefit young women in Ouahigouya, Burkina Faso.</p>
+						</div>
+                        <div style="margin-top: 16px">
+                            <button href="javascript:void()" data-toggle="modal" data-target="#cause" class="btn btn-primary" style="font-size: 0.95rem; padding: 8px 32px">Learn more</button>
                         </div>
                     </div>
 
@@ -74,7 +71,7 @@
                                 </div>
 
                                 <div class="col-8">
-                                    <div class="hero__detail-header">9 March 2018</div>
+                                    <div class="hero__detail-header">August 7, 2018</div>
                                     <div class="hero__subtitle">Closing date</div>
                                 </div>
                             </div>
@@ -89,18 +86,47 @@
             </div>
         </div>
     </div>
-
-    <div class="section organizers">
-        <div class="hh">Organizers</div>
-
-        <div style="margin-top: 16px">
-            <img src="https://www.trustsquare.ch/static/logo.89004c13.svg" class="hero__logo" />
-            <img src="https://procivis.ch/wp-content/uploads/2017/09/Procivis-Logo-only-01.svg" class="hero__logo" />
-            <img src="https://www.fdp.ch/fileadmin/templates/plr.ch/img/logo/logo_fdp.svg" class="hero__logo" />
-        </div>
-
+	
+	
+	<div class="container section">
+        <div class="h" id="project">The project</div>
+		<br>
+		<img border="0" alt="W3Schools" src="src\img\image.png" width="50%">
+        <p><a href="https://www.iamaneh.ch/en/">IAMANEH</a> (International Association for Maternal and Neonatal Health) was founded in 1978 by the Swiss Gynecologist Hubert de Watteville and is a ZEWO certified charity. It focuses on the physical, social and psychological well-being of women and children in Mali, Senegal, Togo, Burkina Faso, Bosnia-Herzegovina and Albania. The “Token of Gratitude” community fundraiser supports a 3-year project (2016-2019) in Burkina Faso which the charity implements together with their local partner AMMIE (Association pour l’Appui Moral, Matériel et Intellectuel de l’Enfant). The focus of their effort is to provide young women with information about and access to reliable means of family planning. Teenage pregnancies are often the start of a vicious circle which leads to young women being rejected from their communities, failing to complete schooling and ending up in prostitution or other dependencies. IAMANEH together with AMMIE provide schooling for “peer-educators”, over 100 young women and men who engage with their local communities on issues around the topic of family planning. They also run health centers where young women can <strong>access information, medical support and contraceptive means.</strong> Lastly, IAMANEH supports young women with children in building up their own source of income, e.g. a sewing or barber shop, to enable their financial independence.</p>
     </div>
 
+    <div class="section organizers">
+        <div class="hh" id="Organizers">Organizers</div>
+	
+			<div class="container">
+				<div style="margin-top: 16px">
+					<div class="orga1">
+					<img src="https://www.trustsquare.ch/static/logo.89004c13.svg"  />
+					<p>In the heart of Switzerland’s commercial centre, Trust Square offers a space for your ideas to flourish. With blockchain technology as the common denominator, we bring together entrepreneurs, businesses, investors as well as academics and researchers in an open and diverse environment.</p>
+					</div>
+					<div class="orga2">
+					<img src="https://procivis.ch/wp-content/uploads/2017/09/Procivis-Logo-only-01.svg"  />
+					<p>Procivis is headquartered in Zurich and we are proud to call Switzerland home. We are dedicated to empowering individuals everywhere by providing them with trusted and compliant digital identity solutions they can fully own and control.</p>
+					</div>
+					<div class="orga3">
+					<img src="https://www.fdp.ch/fileadmin/templates/plr.ch/img/logo/logo_fdp.svg"  />
+					<p>For the last 65 years, the FDP. The Liberal Women Switzerland has been operating as a governing body for 40 cantonal and regional, liberal-minded women’s groups. More than 5000 members are engaged in political affairs, campaigning for the interests of our party. We stand for strong participation of women in politics, economy, as well as society. Our mission is clear: Mixed teams are the formula for success.</p>
+					</div>
+				</div>
+			</div>
+	</div>
+
+
+    <div class="modal fade" id="cause" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="hh">Our cause</div>
+					<p>As part of our commitment to equal opportunities for everyone, Trust Square together with Procivis and FDP Women Switzerland launched a community fundraiser to benefit young women in Ouahigouya, Burkina Faso.
+					For this purpose, we have built a charity smart contract called “Token of Gratitude” based on which individuals can contribute Ether to the project. In return, the smart contract will issue a token to the contributor’s wallet which will serve as a “donation certificate”. The smart contract will run for a total of 8 weeks (August 7, 2018). After this, the funds collected will be released to the wallet of the charity. You can find the repository of the smart contract <a href="https://github.com/Polynom/CryptoFlowers">here</a>.</p>
+					<p>We believe that fundraising via public ledger can greatly increase transparency and reduce administrative costs for charitable giving. We are very happy that the Swiss charity IAMANEH agreed to collaborate with us to accept donations denominated in Ether.</p>
+            </div>
+        </div>
+    </div>
 
 
     <div class="modal fade" id="donateModal" tabindex="-1" role="dialog">
@@ -140,24 +166,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container section">
-        <div class="row">
-            <div class="col">
-                <div class="h">The project</div>
-				<br>
-				<img border="0" alt="W3Schools" src="src\img\image.png" width="98%">
-                <p><a href="https://www.iamaneh.ch/en/">IAMANEH</a> (International Association for Maternal and Neonatal Health) was founded in 1978 by the Swiss Gynecologist Hubert de Watteville and is a ZEWO certified charity. It focuses on the physical, social and psychological well-being of women and children in Mali, Senegal, Togo, Burkina Faso, Bosnia-Herzegovina and Albania. The “Token of Gratitude” community fundraiser supports a 3-year project (2016-2019) in Burkina Faso which the charity implements together with their local partner AMMIE (Association pour l’Appui Moral, Matériel et Intellectuel de l’Enfant). The focus of their effort is to provide young women with information about and access to reliable means of family planning. Teenage pregnancies are often the start of a vicious circle which leads to young women being rejected from their communities, failing to complete schooling and ending up in prostitution or other dependencies. IAMANEH together with AMMIE provide schooling for “peer-educators”, over 100 young women and men who engage with their local communities on issues around the topic of family planning. They also run health centers where young women can <strong>access information, medical support and contraceptive means.</strong> Lastly, IAMANEH supports young women with children in building up their own source of income, e.g. a sewing or barber shop, to enable their financial independence.</p>
-            </div>
-
-            <div class="col">
-                <div class="h">About us</div>
-				<p>As part of our commitment to equal opportunities for everyone, Trust Square together with Procivis and FDP Women Switzerland launched a community fundraiser to benefit young women in Ouahigouya, Burkina Faso. For this purpose, we have built a charity smart contract called “Token of Gratitude” based on which individuals can contribute Ether to the project. In return, the smart contract will issue a token to the contributor’s wallet which will serve as a “donation certificate”. The smart contract will run for a total of 8 weeks (August 7, 2018). After this, the funds collected will be released to the wallet of the charity. You can find the repository of the smart contract <a href="https://github.com/Polynom/CryptoFlowers">here</a>.</p>
-				<p>We believe that fundraising via public ledger can greatly increase transparency and reduce administrative costs for charitable giving. We are very happy that the Swiss charity IAMANEH agreed to collaborate with us to accept donations denominated in Ether.</p>
-            </div>
-        </div>
-
     </div>
 
     <script src="build/bundle.js"></script>
