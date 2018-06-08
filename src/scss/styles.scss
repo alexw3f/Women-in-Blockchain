@@ -216,17 +216,26 @@ nav {
   font-family: "Poppins", sans-serif;
   background: #fff;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.05);
+  padding: 0 !important;
 
   .container {
     display: flex;
     flex-direction: row;
   }
 
+  button {
+    margin-left: 16px;
+    opacity: 0.7;
+  }
+
   .logo {
     font-size: 1.7125rem;
     vertical-align: middle;
     font-weight: 600;
-    margin-top: 16px;
+
+    @media(max-width:1000px) {
+      padding: 8px 16px;
+    }
 
     small {
       font-size: 0.95rem;
@@ -238,6 +247,9 @@ nav {
     }
   }
 
+  #menu {
+    justify-content: flex-end;
+  }
 
   @media(max-width: 1000px) {
     .container {
@@ -246,6 +258,16 @@ nav {
 
     .menu {
       flex-basis: 100%;
+      padding: 16px 0;
+
+      a {
+        display: block !important;
+        padding: 8px 32px !important;
+      }
+
+      div {
+        display: block;
+      }
     }
   }
 

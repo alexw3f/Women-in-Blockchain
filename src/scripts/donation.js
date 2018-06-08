@@ -5,6 +5,8 @@ import $ from 'jquery';
 const contract = new w3.eth.Contract(abi, contractAddr);
 
 const showTulip = (data) => {
+    alert(data);
+
     if (!data) {
         $("#not_found").show(1);
         $("#certificate").hide(1);
