@@ -4,6 +4,7 @@ import $ from 'jquery';
 import BigNumber from 'bignumber.js';
 
 import 'bootstrap';
+import w3, { contractAddr } from './w3';
 import balance from "./balance";
 import donors from "./donors";
 
@@ -22,6 +23,8 @@ $(document).ready(() => {
     }, 1000);
 
     let b;
+
+    $('#donation-address').val(contractAddr);
 
     balance.subscribe((balance) => {
         b = new BigNumber(balance);
@@ -50,7 +53,7 @@ $(document).ready(() => {
 
     $("#findDonatorForm").submit((e) => {
         e.preventDefault();
-        window.location.href = "donator.html#" + $("#donatorAddress").val();
+        window.location.href = "donation.html#" + $("#donatorAddress").val();
     });
 });
 

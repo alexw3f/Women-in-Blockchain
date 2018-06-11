@@ -5,8 +5,8 @@
     <title>Women in Blockchain</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
 
     <style type="text/css">
         body { opacity: 1; transition: opacity ease-in-out 2s; }
@@ -71,7 +71,7 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="hero__detail-header"><span id="donors"><i class="fas fa-circle-notch fa-spin"></i></span></div>
-                                    <div class="hero__subtitle">Donors</div>
+                                    <div class="hero__subtitle">Donations</div>
                                 </div>
 
                                 <div class="col-8">
@@ -140,10 +140,12 @@
             <div class="modal-content">
                 <div class="hh">Donate now</div>
 
+                <!-- TODO: Replace with actual QR code -->
                 <img style="width: 200px; height: 200px; margin: 32px auto;" src="data:image/png;base64,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" />
                 <div class="form-group">
                     <label>Ethereum address</label>
-                    <input class="form-control" value="0x10720287897512" />
+                    <!-- TODO: Replace with actual address -->
+                    <input class="form-control" id="donation-address" value="" />
                 </div>
                 <button class="btn btn-primary">Copy address</button>
             </div>
