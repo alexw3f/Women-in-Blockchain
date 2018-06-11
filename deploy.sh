@@ -1,11 +1,11 @@
 #!/bin/bash
 
-SRV=pc
+SRV=procivis
 
 # zip
 rm wib.zip
 cp build/bundle.js .
-zip -r wib.zip . -x node_modules\* .git\*
+zip -r wib.zip . -x node_modules\* .git\* build\* wib\*zip
 
 # upload
 scp wib.zip $SRV:/var/www/flowers
