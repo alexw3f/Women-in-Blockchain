@@ -4,9 +4,9 @@ const w3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/y
 // const w3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
 
 // wallet
-const addr = '0xaa05994e1236a722904c5f0e572a50008d016cae';
+const addr = '0x3c2FFF4671fA239D5e167e5356058DF11a799aCegit ';
 // crowdsale contract
-const contractAddr = '0xE127142C6d0C065abE1af2Dc7E1Dca4AD088E3ad';
+const contractAddr = '0xba248210d2d0d49398e53a3919174d1540ded083';
 
 import abi from './abi';
 import tokenAbi from './tokenAbi';
