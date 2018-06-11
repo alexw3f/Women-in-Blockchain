@@ -44,9 +44,9 @@ const showTulip = (event) => {
     if (bytes[6] < 86)
       flower = 'r';
     else if (bytes[6] < 171)
-      flower = 'r'; // TODO
+      flower = 't';
     else
-      flower = 'r'; // TODO
+      flower = 's';
 
     let bloom;
     if (bytes[5] < 52)
@@ -79,7 +79,8 @@ const showTulip = (event) => {
     let bloomColor = (bytes[2] & 0x0f) + '';
 
     // compose file names
-    const bloomFile = 'img/blooms/' + flower + bloom + '_' + bloomColor + '.png';
+    const bloomFile = 'img/blooms/' + flower + bloom + '.png';
+    //const bloomFile = 'img/blooms/' + flower + bloom + '_' + bloomColor + '.png';
     const stemFile = 'img/stems/' + flower + stem + '.png';
     const effectFile = 'img/effects/e' + special + '.png';
 
