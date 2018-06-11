@@ -55,6 +55,8 @@ $(document).ready(() => {
         e.preventDefault();
         window.location.href = "donation.html#" + $("#donatorAddress").val();
     });
+
+    $("#ethslink").attr("href", "https://etherscan.io/address/"+contractAddr);
 });
 
 import '../vendor/particles';

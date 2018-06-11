@@ -315,3 +315,17 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+#dDisclaimer {
+  font-size: 13px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.centered {
+  text-align: center;
+}
+
+.hero__progress {
+  display: none; //NOTE: left just hidden for future follow-up
+}
