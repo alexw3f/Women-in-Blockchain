@@ -5,7 +5,7 @@ SRV=procivis
 # zip
 rm wib.zip
 cp build/bundle.js .
-zip -r wib.zip . -x node_modules\* .git\* build\* wib\*zip
+zip -r wib.zip . -x node_modules\* .git\* build\* wib\*zip src\* \*.DS_Store
 
 # upload
 scp wib.zip $SRV:/var/www/flowers
