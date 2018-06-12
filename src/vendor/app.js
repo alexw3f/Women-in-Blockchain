@@ -12,7 +12,6 @@ particlesJS.load('particles-js', 'particles.json', function() {
 /* Otherwise just put the config content (json): */
 
 particlesJS('particles-js',
-  
   {
     "particles": {
       "number": {
@@ -35,7 +34,7 @@ particlesJS('particles-js',
           "nb_sides": 5
         },
         "image": {
-          "src": "femenine.png",
+          "src": "img/female-sign.png",
           "width": 100,
           "height": 100
         }
