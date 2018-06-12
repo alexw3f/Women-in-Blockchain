@@ -2,6 +2,7 @@ import '../scss/styles.scss';
 
 import $ from 'jquery';
 import BigNumber from 'bignumber.js';
+import ClipboardJS from 'clipboard';
 
 import 'bootstrap';
 import w3, { contractAddr } from './w3';
@@ -16,6 +17,9 @@ const dateStart = moment("2017-08-07");
 const totalDays = dateEnd.diff(dateStart, 'days');
 
 import './donation';
+
+new ClipboardJS('.btn');
+
 
 $(document).ready(() => {
     setTimeout(() => {

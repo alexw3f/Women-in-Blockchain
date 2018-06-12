@@ -48,7 +48,6 @@
                         <div class="h">Our <span class="text-primary">cause</span></div>
 
                         <div class="hero__desc">
-                          <!-- TODO: Update -->
                           <p>
                             As part of our commitment to equal opportunities
                             for everyone, Trust Square together with Procivis
@@ -206,16 +205,16 @@
             <div class="modal-content">
                 <div class="hh">Donate now</div>
                 <div class="centered">Min donation: 0.015 ETH</div>
-                <div class="centered">Gas limit: 200,000</div>
+                <div class="centered">Gas limit: 250,000</div>
 
                 <!-- TODO: Replace with actual QR code -->
                 <img style="width: 200px; height: 200px; margin: 32px auto;" src="./img/qr.png" />
                 <div class="form-group">
                     <label>Ethereum address (<a id="ethslink" target="_blank">see Etherscan</a>)</label>
                     <!-- TODO: Replace with actual address -->
-                    <input disabled class="form-control" id="donation-address" value="" />
+                    <input readonly class="form-control" id="donation-address" value="" />
                 </div>
-                <button class="btn btn-primary">Copy address</button>
+                <button class="btn btn-primary" data-clipboard-target="#donation-address">Copy address</button>
 
                 <div id="dDisclaimer">
                     Before you proceed, please note the following: the Token of Gratitude is not transferable. Only one token per contribution will be issued. The token is a smart contract and has no inherent value or utility, the token is non-refundable and under no circumstances is intended for speculative or other investment.
