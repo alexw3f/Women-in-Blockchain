@@ -9,5 +9,15 @@
     "automergeType": "branch",
     "prTitle": "Manual merge required for major updates",
     "prBody": "This pull request contains major updates and requires manual review and merge."
-  }
+  },
+  "packageRules": [
+    {
+      "description": "Automatically merge minor and patch-level updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "automergeComment": "This pull request was automatically merged.",
+      "automergeStrategy": "all"
+    }
+  ]
 }
