@@ -3,10 +3,7 @@
   "extends": [
     "config:base"
   ],
-  "automerge": {
-    "minor": true,
-    "patch": true
-  },
+  "automerge": true,
   "automergeType": "pr",
   "automergeComment": "This pull request was automatically merged.",
   "prCreation": "automerge",
