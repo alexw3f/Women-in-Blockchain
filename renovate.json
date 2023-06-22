@@ -2,5 +2,19 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
-  ]
+  ],
+  "automerge": {
+    "minor": true,
+    "patch": true
+  },
+  "automergeType": "pr",
+  "automergeComment": "This pull request was automatically merged.",
+  "prCreation": "automerge",
+  "prCreationBranchSuffix": "renovate",
+  "major": {
+    "automerge": false,
+    "automergeType": "branch",
+    "prTitle": "Manual merge required for major updates",
+    "prBody": "This pull request contains major updates and requires manual review and merge."
+  }
 }
